@@ -16,6 +16,8 @@ public:
 	void setPredator(const bool& predator);
 	bool getPredator()const;
 
+	virtual void show()const;
+	virtual ~Animal() = default;
 
 
 
