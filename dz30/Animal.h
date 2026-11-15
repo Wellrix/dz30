@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include "ZooException.h"
 using namespace std;
 class Animal
 {

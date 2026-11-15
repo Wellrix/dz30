@@ -8,8 +8,17 @@ Animal::Animal()
 
 Animal::Animal(string name, bool predator)
 {
-    this->name = name;
-    this->predator = predator;
+    try {
+        if (name.empty()) {
+            throw NameException();
+        }
+        this->name = name;
+        this->predator = predator;
+    }
+    catch (NameException& e) {
+        cout << "Name empty!!!!" << endl;
+        throw;
+    }
 }
 
 void Animal::setName(const string& name)
