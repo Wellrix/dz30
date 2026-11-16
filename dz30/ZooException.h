@@ -27,7 +27,7 @@ class PredatorException:
 {
 public:
 	string showMessage() const override {
-		return "";
+		return "Cannot add a predator to non predator animals!";
 	}
 
 };
@@ -37,7 +37,7 @@ class MaxCapacityException:
 {
 public:
 	string showMessage() const override {
-		return "";
+		return "Cage max capacity reached!";
 	}
 	
 };
