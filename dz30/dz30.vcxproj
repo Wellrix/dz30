@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Animal.cpp" />
     <ClCompile Include="Bird.cpp" />
+    <ClCompile Include="Cage.cpp" />
     <ClCompile Include="dz30.cpp" />
     <ClCompile Include="Fish.cpp" />
     <ClCompile Include="Mammal.cpp" />
@@ -148,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="Animal.h" />
     <ClInclude Include="Bird.h" />
+    <ClInclude Include="Cage.h" />
     <ClInclude Include="Fish.h" />
     <ClInclude Include="Mammal.h" />
     <ClInclude Include="resource.h" />
