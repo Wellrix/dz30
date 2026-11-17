@@ -72,10 +72,17 @@ void Cage::removeAnimal(const string& name)
 
 Animal* Cage::findAnimal(const string& name) const
 {
+    for (int i = 0; i < animals.size(); i++) {
+        if (animals[i]->getName() == name) {
+            return animals[i];
 
+        }
+    }
     return nullptr;
 }
 
 void Cage::show() const
 {
+    cout << "Cage: " << num << endl;
+    cout << "Current animals: " << getCurCount() << "/" << MaxCapacity << endl;
 }
