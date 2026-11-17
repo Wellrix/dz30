@@ -85,4 +85,8 @@ void Cage::show() const
 {
     cout << "Cage: " << num << endl;
     cout << "Current animals: " << getCurCount() << "/" << MaxCapacity << endl;
+    for (int i = 0; i < animals.size(); i++) {
+        animals[i]->show();
+        cout << "---------------------------------------------" << endl;
+    }
 }
