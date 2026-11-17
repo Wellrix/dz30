@@ -32,11 +32,45 @@ int main()
         cout << "Error: " << e.showMessage() << endl;
     }
 
+    Cage cSmall(3, 1);
+    try {
+        cSmall.addAnimal(new Mammal("Lion", true, "Savanna"));
+        cSmall.addAnimal(new Mammal("Tiger", true, "Jungle"));
+    }
+    catch (ZooExeption& e) {
+        cout << "Error: " << e.showMessage() << endl;
+    }
+
+    try {
+        c1.addAnimal(new Mammal("", false, "Forest"));
+    }
+    catch (ZooExeption& e) {
+        cout << "Error: " << e.showMessage() << endl;
+    }
+
+    cout << endl;
+    c1.show();
+    c2.show();
+    c3.show();
+
+    Animal* found = c2.findAnimal("Chicken");
+    if (found != nullptr) {
+        cout << "Found: ";
+        found->show();
+    }
+
+    c2.removeAnimal("Chicken");
+    cout << "\nAfter remove:" << endl;
+    c2.show();
+
+    return 0;
+};
 
 
 
 
 
-}
+
+
 
 
