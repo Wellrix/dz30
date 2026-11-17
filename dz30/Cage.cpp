@@ -62,7 +62,9 @@ void Cage::removeAnimal(const string& name)
 {
     for (int i = 0; i < animals.size(); i++) {
         if (animals[i]->getName() == name) {
-            
+            delete animals[i];
+            animals.erase(animals.begin() + i);
+            return;
         }
     }
 
@@ -70,6 +72,7 @@ void Cage::removeAnimal(const string& name)
 
 Animal* Cage::findAnimal(const string& name) const
 {
+
     return nullptr;
 }
 
