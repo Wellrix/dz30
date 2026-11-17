@@ -9,10 +9,27 @@ using namespace std;
 class Cage
 {
 	int num;
-	int MaxCapcity;
-	vector <Animal*> anlimals;
+	int MaxCapacity;
+	vector <Animal*> animals;
 
 public:
+	Cage();
+	Cage(int num,int MaxCapacity);
+	~Cage();
+
+	int getNum()const;
+	void setNum(const int& num);
+
+	int getMaxCapacity()const;
+	void setMaxCapacity(const int& MaxCapacity);
+
+	int getCurCount()const;
+
+	void addAnimal(Animal* animal);
+	void removeAnimal(const string& name);
+	Animal* findAnimal(const string& name) const;
+	void show() const;
+
 
 };
 
